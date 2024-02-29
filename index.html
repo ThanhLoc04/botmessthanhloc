@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    },
+      {
+    background: linear-gradient(-20deg,#3eb2b6 0%,#4281b5 100%)no-repeat fixed top right;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+html,body{cursor:url("https://i.imgur.com/IXULuQ1.png"), auto;}
+a:hover{cursor:url("https://i.imgur.com/IXULuQ1.png"), auto;}
+
+h2 {
+    color: rgb(26, 26, 26);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+h3{
+    color: rgb(26, 26, 26);
+    margin-top: 0;
+    font-size: 20px;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.wrap {
+    margin: 0;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile{
+    max-width: 690px;
+    background-color: rgb(255 255 255 / 40%);
+    color: rgb(44, 44, 44);
+    margin: 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 8px 20px -10px rgba(177, 177, 177, 0.6);
+}
+
+.profile-above{
+    position: relative;
+    margin: 10px;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.avatar img{
+    height: 100px;
+    width: 100px;
+    border-radius:50%;
+    margin: 15px;
+    padding: 5px;
+    box-shadow: 0 5px 20px 0 #27aaff,0px 0 0 5px #27aaff;
+}
+
+.info {
+    margin-left: 15px;
+}
+
+.info-maxim{
+    color: #0043ff;
+}
+
+.profile-above p {
+    margin-top: 0;
+}
+
+.profile-below {
+    display: flex;
+    width: 100%;
+}
+
+.profile-below .left {
+    display: flex;
+    width: 30%;
+    margin: 20px 0;
+    padding: 0 30px;
+    border-right: 1px solid #777777;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-below .left i{
+    width: 25px;
+    color:#242424;
+    text-align: center;
+}
+
+.profile-below .left .follow{
+    background: linear-gradient(20deg,#2aabe8 -20%,#892ece 100%);
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 100em;
+    margin:5px 0;
+    box-shadow: 0 4px 20px rgb(92 66 236 / 70%);
+}
+
+
+.profile-below .left .follow:hover{
+    box-shadow: 0 4px 20px rgb(92 66 236 / 70%);
+    opacity: .8;
+    transition: all .3s;
+    transform: scale(1.05);
+}
+
+.profile-below .right {
+    display:flex;
+    justify-content:space-between;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 0 30px;
+    flex: 1;
+}
+
+.profile-below .right .link {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profile-below .right .link li a{
+    font-size: 20px;
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.profile-below .right .link li a:hover{
+    opacity: .7;
+    transition: all .3s;
+    transform: scale(1.1);
+}
+
+.profile-below .right .link li:nth-child(1) a{
+    background: linear-gradient(10deg,#2b5adf ,#45aaff );
+    box-shadow: 0 4px 20px rgb(35 93 211 / 70%);
+}
+
+.profile-below .right .link li:nth-child(1) a:hover {
+    box-shadow: 0 4px 20px rgb(35 93 211 / 70%);
+}
+
+.profile-below .right .link li:nth-child(2) a{
+    background: linear-gradient(20deg,#ffc050,#ff593f,#cf3a97 ,#7841ca);
+    box-shadow: 0 4px 20px rgb(211 67 35 / 70%);
+}
+
+.profile-below .right .link li:nth-child(2) a:hover {
+    box-shadow: 0 4px 20px rgb(211 67 35 / 70%);
+}
+
+.profile-below .right .link li:nth-child(3) a{
+    background: #ebad20;
+    box-shadow: 0 4px 20px rgb(211 165 35 / 70%);
+}
+
+.profile-below .right .link li:nth-child(3) a:hover {
+    box-shadow: 0 4px 20px rgb(211 165 35 / 70%);
+}
+
+.profile-below .right .link li:nth-child(4) a{
+    background: #000;
+    box-shadow: 0 4px 20px rgb(28 28 28 / 70%);
+}
+
+.profile-below .right .link li:nth-child(4) a:hover {
+    box-shadow: 0 4px 20px rgb(28 28 28 / 70%)
+}
+
+.profile-below .right .link li:nth-child(5) a{
+    background: #ee3737;
+    box-shadow: 0 4px 20px rgb(255 118 118 / 70%);
+}
+
+.profile-below .right .link li:nth-child(5) a:hover {
+    box-shadow: 0 4px 20px rgb(255 118 118 / 70%);
+}
+
+@media screen and (max-width: 768px){
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3{
+        font-size: 18px;
+    }
+
+    .avatar img {
+        height: 80px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .wrap{
+        height: auto;
+    }   
+    .profile-below {
+        flex-direction: column;
+    }
+
+    .profile-below .left {
+        width: auto;
+        border: 0;
+    }
+  </style>
+  <script>
+    function killCopy(e) {
+      return false;
+    }
+
+    function reEnable() {
+      return true;
+    }
+
+    document.onselectstart = new Function("return false");
+
+    if (window.sidebar) {
+      document.onmousedown = killCopy;
+      document.onclick = reEnable;
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://imgur.com/undefined" rel="icon" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
+    rel="stylesheet">
+  <title>MY INFORMATION</title>
+  <script type="text/JavaScript">
+var message="NoRightClicking"; function defeatIE() {if (document.all) {(message);return false;}} function defeatNS(e) {if (document.layers||(document.getElementById&&!document.all)) { if (e.which==2||e.which==3) {(message);return false;}}} if (document.layers) {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;} else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;} document.oncontextmenu=new Function("return false") 
+</script>
+</head>
+
+<body style="">
+  <div class="wrap">
+    <div class="profile">
+      <div class="profile-above">
+        <div class="avatar">
+          <img src="https://i.ibb.co/WphDzXd/1690074364999.jpg">
+        </div>
+        <div class="info">
+          <h2><span
+              style="background: url(&quot;https://lh5.googleusercontent.com/proxy/8pFzttS9q8jwN_vA-_u7dSEDH2WlAZ4SA2YSEgzGWiqmdYhUejwgcv-nKmpx1hlwrL8oTVz1DfK_daTeAt_it_MHRA42jmPHFk-6smvJ5LocCs-5Pw=s0-d&quot;) repeat scroll 0% 0% transparent; text-shadow: 0pt 0pt red, 0pt 1pt 0.3em blue;">Lê
+              Thanh Lộc&nbsp;&nbsp;<i class="fa fa-check-circle" style="font-size: 16px; color:blue"
+                title="Huy hiệu đã xác minh xác nhận đây là Trang xác thực của người của người công chúng, công ty truyền thông hoặc thương hiệu này."></i></span>
+          </h2>
+          <div class="info-maxim">
+            <i class="fa fa-address-book" aria-hidden="true"></i>&nbsp; <span
+              style="background: url(&quot;https://lh5.googleusercontent.com/proxy/8pFzttS9q8jwN_vA-_u7dSEDH2WlAZ4SA2YSEgzGWiqmdYhUejwgcv-nKmpx1hlwrL8oTVz1DfK_daTeAt_it_MHRA42jmPHFk-6smvJ5LocCs-5Pw=s0-d&quot;) repeat scroll 0% 0% transparent; text-shadow: 0pt 0pt red, 0pt 1pt 0.3em blue;">@ThanhLoc04</span>
+
+          </div>
+          <br><i class="fa fa-volume-up" onclick="document.getElementById('audio2').play();" style="color:red"
+            title="hát">
+            <audio id="audio2" preload="none">
+              <source src="https://www.youtube.com/watch?v=AHFrqTEfIAY&ab_channel=H2ORemix" type="audio/mpeg">Trình duyệt của bạn ko hỗ trợ thẻ
+              audio, vui lòng cập nhật phiên bản mới nhất hoặc đổi trình duyệt.
+            </audio></i>&nbsp; <span
+            style="background: url(&quot;https://lh5.googleusercontent.com/proxy/8pFzttS9q8jwN_vA-_u7dSEDH2WlAZ4SA2YSEgzGWiqmdYhUejwgcv-nKmpx1hlwrL8oTVz1DfK_daTeAt_it_MHRA42jmPHFk-6smvJ5LocCs-5Pw=s0-d&quot;) repeat scroll 0% 0% transparent; text-shadow: 0pt 0pt red, 0pt 1pt 0.3em blue;">Nghe Nhạc Vui Vẻ</span>
+        </div>
+      </div>
+      <div class="profile-below">
+        <div class="left">
+          <div class="intro">
+            <h3><span
+                style="background: url(&quot;https://lh5.googleusercontent.com/proxy/8pFzttS9q8jwN_vA-_u7dSEDH2WlAZ4SA2YSEgzGWiqmdYhUejwgcv-nKmpx1hlwrL8oTVz1DfK_daTeAt_it_MHRA42jmPHFk-6smvJ5LocCs-5Pw=s0-d&quot;) repeat scroll 0% 0% transparent; text-shadow: 0pt 0pt red, 0pt 1pt 0.3em blue;">Giới
+                thiệu:</span></h3>
+            <p><i class="fas fa-graduation-cap"></i>BotChat Messenger</p>
+            <p><i class="fas fa-birthday-cake"></i>07/07/2004</p>
+            <p><i class="fas fa-rss"></i>110.091 người theo dõi</p>
+            <p><i class="fas fa-map-marker-alt"></i>Hồ Chí Minh, Việt Nam</p>
+          </div>
+          <a class="follow" href="https://web-api.jrtxtracy.repl.co/docs/" blank"="" title="Theo dõi tôi uwu"><span
+              style="background: url(&quot;https://lh5.googleusercontent.com/proxy/8pFzttS9q8jwN_vA-_u7dSEDH2WlAZ4SA2YSEgzGWiqmdYhUejwgcv-nKmpx1hlwrL8oTVz1DfK_daTeAt_it_MHRA42jmPHFk-6smvJ5LocCs-5Pw=s0-d&quot;) repeat scroll 0% 0% transparent; text-shadow: 0pt 0pt red, 0pt 1pt 0.3em pink;">Document
+              API</span></a>
+        </div>
+        <div class="right">
+          <div class="description">
+            <h3><span
+                style="background: url(&quot;https://lh5.googleusercontent.com/proxy/8pFzttS9q8jwN_vA-_u7dSEDH2WlAZ4SA2YSEgzGWiqmdYhUejwgcv-nKmpx1hlwrL8oTVz1DfK_daTeAt_it_MHRA42jmPHFk-6smvJ5LocCs-5Pw=s0-d&quot;) repeat scroll 0% 0% transparent; text-shadow: 0pt 0pt red, 0pt 1pt 0.3em red;">Lời
+                nói:</span></h3>
+            <p><b>Lê Thanh Lộc</b> </p>
+            <p>Link Contact Me </p>
+            <br>
+            <h3><span
+                style="background: url(&quot;https://lh5.googleusercontent.com/proxy/8pFzttS9q8jwN_vA-_u7dSEDH2WlAZ4SA2YSEgzGWiqmdYhUejwgcv-nKmpx1hlwrL8oTVz1DfK_daTeAt_it_MHRA42jmPHFk-6smvJ5LocCs-5Pw=s0-d&quot;) repeat scroll 0% 0% transparent; text-shadow: 0pt 0pt red, 0pt 1pt 0.3em black;">Các
+                liên kết mạng xã hội</span></h3>
+          </div>
+          <ul class="link">
+            <li>
+              <a href="https://fb.me/LeThanhLoc.BuDaPro" target="blank" title="Facebook"><i
+                  class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="blank" title="Instagram"><i
+                  class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="" target="blank" title="Info"><i class="fa fa-id-card"></i></a>
+            </li>
+            <li>
+              <a href="mailto:lethanhloc07072004@gmail.com" target="blank" title="Mail"><i class="fas fa-envelope"></i></a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@" target="blank" title="Tiktok"><i class="	fa fa-grav"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/ThanhLoc04" target="blank" title="Github"><i class="fa fa-github"></i></a>
+            </li>
+            <li>
+              <a href="https://i.imgur.com/vTx2DQp.jpg" target="blank" title="Donate"><i
+                  class="	fab fa-bitcoin"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    #snowflakeContainer {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+    .snowflake {
+      padding-left: 15px;
+      font-size: 14px;
+      line-height: 24px;
+      position: fixed;
+      color: pink;
+      user-select: none;
+      z-index: 1000;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    .snowflake:hover {
+      cursor: default
+    }
+  </style>
+  <div id="snowflakeContainer">
+
+    <p class="snowflake" style="opacity: 1.38255; font-size: 15.3287px; transform: translate3d(635px, 345px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.946045; font-size: 8.14669px; transform: translate3d(793px, 237px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.63239; font-size: 10.2893px; transform: translate3d(473px, 284px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.061; font-size: 9.92385px; transform: translate3d(735px, 84px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 0.825854; font-size: 5.49862px; transform: translate3d(7px, 270px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 1.48298; font-size: 8.69173px; transform: translate3d(1318px, 129px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.661695; font-size: 10.4967px; transform: translate3d(735px, 75px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.789244; font-size: 16.9677px; transform: translate3d(1340px, 259px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.05229; font-size: 19.3373px; transform: translate3d(505px, 132px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.11439; font-size: 8.25638px; transform: translate3d(327px, 343px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.06735; font-size: 14.2095px; transform: translate3d(241px, 345px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.19333; font-size: 12.0364px; transform: translate3d(1352px, 73px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.584542; font-size: 10.9322px; transform: translate3d(1249px, 101px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.805123; font-size: 4.54728px; transform: translate3d(296px, 77px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.606391; font-size: 19.1959px; transform: translate3d(1152px, 245px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.859034; font-size: 7.78143px; transform: translate3d(1154px, 145px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.241; font-size: 23.2077px; transform: translate3d(291px, 347px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 1.06787; font-size: 15.0558px; transform: translate3d(230px, 4px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 1.29535; font-size: 7.93861px; transform: translate3d(1171px, 57px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.40765; font-size: 6.84937px; transform: translate3d(466px, 154px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.825032; font-size: 19.3422px; transform: translate3d(950px, 287px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.848375; font-size: 8.62985px; transform: translate3d(777px, 147px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.19904; font-size: 4.38981px; transform: translate3d(1031px, 256px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.25882; font-size: 17.5868px; transform: translate3d(1094px, 79px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.768933; font-size: 20.3745px; transform: translate3d(188px, 256px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.916144; font-size: 8.59397px; transform: translate3d(456px, -1px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.747583; font-size: 9.86191px; transform: translate3d(1296px, 272px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.549637; font-size: 11.9852px; transform: translate3d(201px, 239px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.533711; font-size: 12.5076px; transform: translate3d(1038px, 345px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.723837; font-size: 7.77946px; transform: translate3d(58px, 96px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 1.31284; font-size: 5.69832px; transform: translate3d(72px, 39px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 0.708968; font-size: 11.6575px; transform: translate3d(1020px, 320px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.07183; font-size: 6.57869px; transform: translate3d(173px, 187px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.935263; font-size: 10.217px; transform: translate3d(769px, 24px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 0.666657; font-size: 17.5429px; transform: translate3d(1121px, 209px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.542566; font-size: 10.498px; transform: translate3d(414px, 59px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 0.811606; font-size: 19.5461px; transform: translate3d(933px, 8px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 1.00977; font-size: 22.6684px; transform: translate3d(-74px, 296px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.65578; font-size: 17.4673px; transform: translate3d(957px, 359px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.787195; font-size: 14.7209px; transform: translate3d(863px, 248px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.16721; font-size: 17.8996px; transform: translate3d(1003px, 2px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 0.694186; font-size: 17.6779px; transform: translate3d(803px, -41px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.72056; font-size: 7.67855px; transform: translate3d(413px, 60px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 0.805773; font-size: 22.7184px; transform: translate3d(1125px, 299px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.22918; font-size: 10.2287px; transform: translate3d(304px, 114px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 1.11784; font-size: 17.7967px; transform: translate3d(520px, 245px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.515906; font-size: 17.9807px; transform: translate3d(86px, 19px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 0.849324; font-size: 19.0756px; transform: translate3d(-96px, 7px, 0px);">❀</p>
+    <p class="snowflake" style="opacity: 0.831601; font-size: 19.099px; transform: translate3d(1191px, 203px, 0px);">❀
+    </p>
+    <p class="snowflake" style="opacity: 0.991652; font-size: 18.3781px; transform: translate3d(993px, 62px, 0px);">❀
+    </p>
+  </div>
+  <script style="text/javascript">
+    //<![CDATA[
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame; var transforms = ["transform", "msTransform", "webkitTransform", "mozTransform", "oTransform"]; var transformProperty = getSupportedPropertyName(transforms); var snowflakes = []; var browserWidth; var browserHeight; var numberOfSnowflakes = 50; var resetPosition = false; function setup() {window.addEventListener("DOMContentLoaded", generateSnowflakes, false); window.addEventListener("resize", setResetFlag, false)} setup(); function getSupportedPropertyName(b) {for (var a = 0; a < b.length; a++) {if (typeof document.body.style[b[a]] != "undefined") {return b[a]} } return null} function Snowflake(b, a, d, e, c) {this.element = b; this.radius = a; this.speed = d; this.xPos = e; this.yPos = c; this.counter = 0; this.sign = Math.random() < 0.5 ? 1 : -1; this.element.style.opacity = 0.5 + Math.random(); this.element.style.fontSize = 4 + Math.random() * 20 + "px"} Snowflake.prototype.update = function () {this.counter += this.speed / 5000; this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40; this.yPos += Math.sin(this.counter) / 40 + this.speed / 30; setTranslate3DTransform(this.element, Math.round(this.xPos), Math.round(this.yPos)); if (this.yPos > browserHeight) {this.yPos = -50} }; function setTranslate3DTransform(a, c, b) {var d = "translate3d(" + c + "px, " + b + "px, 0)"; a.style[transformProperty] = d} function generateSnowflakes() {var b = document.querySelector(".snowflake"); var h = b.parentNode; browserWidth = document.documentElement.clientWidth; browserHeight = document.documentElement.clientHeight; for (var d = 0; d < numberOfSnowflakes; d++) {var j = b.cloneNode(true); h.appendChild(j); var e = getPosition(50, browserWidth); var a = getPosition(50, browserHeight); var c = 5 + Math.random() * 40; var g = 4 + Math.random() * 10; var f = new Snowflake(j, g, c, e, a); snowflakes.push(f)} h.removeChild(b); moveSnowflakes()} function moveSnowflakes() {for (var b = 0; b < snowflakes.length; b++) {var a = snowflakes[b]; a.update()} if (resetPosition) {browserWidth = document.documentElement.clientWidth; browserHeight = document.documentElement.clientHeight; for (var b = 0; b < snowflakes.length; b++) {var a = snowflakes[b]; a.xPos = getPosition(50, browserWidth); a.yPos = getPosition(50, browserHeight)} resetPosition = false} requestAnimationFrame(moveSnowflakes)} function getPosition(b, a) {return Math.round(-1 * b + Math.random() * (a + 2 * b))} function setResetFlag(a) {resetPosition = true};
+	//]]>
+  </script>
+  <link rel="stylesheet" href="https://cdn.leanhduc.pro.vn/utilities/flying-man-loading-effect/style.css">
+  <div class="loadd" style="display: none;">
+    <div class="body">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="base">
+        <span></span>
+        <div class="face"></div>
+      </div>
+    </div>
+    <div class="longfazers">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(window).load(function () {
+      setTimeout(function () {
+        $(".loadd").fadeOut("slow");
+      }, 500)
+    });
+  </script>
+</body>
+<script type='text/javascript'>
+  //<![CDATA[
+  !function (e, t, a) {function n() {c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), o(), r()} function r() {for (var e = 0; e < d.length; e++)d[e].alpha <= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y--, d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999"); requestAnimationFrame(r)} function o() {var t = "function" == typeof e.onclick && e.onclick; e.onclick = function (e) {t && t(), i(e)}} function i(e) {var a = t.createElement("div"); a.className = "heart", d.push({el: a, x: e.clientX - 5, y: e.clientY - 5, scale: 1, alpha: 1, color: s()}), t.body.appendChild(a)} function c(e) {var a = t.createElement("style"); a.type = "text/css"; try {a.appendChild(t.createTextNode(e))} catch (t) {a.styleSheet.cssText = e} t.getElementsByTagName("head")[0].appendChild(a)} function s() {return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"} var d = []; e.requestAnimationFrame = function () {return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {setTimeout(e, 1e3 / 60)}}(), n()}(window, document);
+  /]]>
+</script><!-- start codepro music box -->
+<div class='codepro-music-box'>
+  <button class='codepro-music-box-toggle-btn'>
+    <a title='Play music'><i class='fa fa-music'></i></a>
+  </button>
+  <div class='codepro-music-holder'>
+    <iframe allow='autoplay;encrypted-media' allowfullscreen='' frameborder='0' height='auto'
+      src='https://g.top4top.io/m_2515w718a1.mp3' width='auto'></iframe>
+  </div>
+</div>
+<style>
+  .codepro-music-box {
+    position: fixed;
+    width: 300px;
+    height: 160px;
+    z-index: 120;
+    bottom: 30px;
+    left: 30px
+  }
+
+  .codepro-music-box a {
+    color: #fff
+  }
+
+  @media (max-width: 991px) {
+    .codepro-music-box {
+      width: 250px;
+      height: 120px;
+      left: auto;
+      left: 30px
+    }
+  }
+
+  .codepro-music-box .codepro-music-holder {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #eee;
+    position: absolute;
+    left: 0;
+    top: -30px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out
+  }
+
+  .codepro-music-box .codepro-music-holder iframe {
+    width: 100%;
+    height: 100%
+  }
+
+  .codepro-music-box button {
+    background: rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+    font-size: 18px;
+    font-size: 1rem;
+    color: #fff;
+    border: 1px solid #e6e6e6;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%
+  }
+
+  @media (max-width: 991px) {
+    .codepro-music-box button {
+      left: auto;
+      left: 0
+    }
+  }
+
+  .codepro-music-box .toggle-codepro-music-box {
+    top: -50px;
+    visibility: visible;
+    opacity: 1
+  }
+</style>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<script src='//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script type='text/javascript'>//<![CDATA[
+  if ($(".codepro-music-box").length) {var musicBtn = $(".codepro-music-box-toggle-btn"), musicBox = $(".codepro-music-holder"); musicBtn.on("click", function () {musicBox.toggleClass("toggle-codepro-music-box"); return false;})}
+//]]></script>
+<!-- end code music box -->
+<link rel="stylesheet" href="https://cdn.leanhduc.pro.vn/utilities/flying-man-loading-effect/style.css" />
+<div class='loadd'>
+  <div class='body'>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class='base'>
+      <span></span>
+      <div class='face'></div>
+    </div>
+  </div>
+  <div class='longfazers'>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+<script type='text/javascript'>
+  $(window).load(function () {
+    setTimeout(function () {
+      $(".loadd").fadeOut("fast");
+    }, 1)
+  });
+</script>
+
+</html>

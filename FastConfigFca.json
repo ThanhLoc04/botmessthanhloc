@@ -1,0 +1,39 @@
+{
+    "Language": "vi",
+    "PreKey": "",
+    "AutoUpdate": true,
+    "MainColor": "#9900FF",
+    "MainName": "[ FCA-HZI ]",
+    "Uptime": false,
+    "Config": "default",
+    "DevMode": false,
+    "Login2Fa": false,
+    "AutoLogin": false,
+    "BroadCast": false,
+    "AuthString": "",
+    "EncryptFeature": false,
+    "ResetDataLogin": false,
+    "AutoInstallNode": false,
+    "AntiSendAppState": true,
+    "AutoRestartMinutes": 1440,
+    "RestartMQTT_Minutes": 0,
+    "Websocket_Extension": {
+        "Status": true,
+        "ResetData": false,
+        "AppState_Path": "appstate.json"
+    },
+    "HTML": {
+        "HTML": false,
+        "UserName": "Guest",
+        "MusicLink": ""
+    },
+    "AntiGetInfo": {
+        "Database_Type": "default",
+        "AntiGetThreadInfo": true,
+        "AntiGetUserInfo": true
+    },
+    "Stable_Version": {
+        "Accept": false,
+        "Version": ""
+    }
+}

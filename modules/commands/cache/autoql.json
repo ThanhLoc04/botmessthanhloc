@@ -1,0 +1,9 @@
+{
+  "status": true,
+  "schedule": [
+    "06:00:00",
+    "14:26:00"
+  ],
+  "blockID": [],
+  "urlAPI": "https://api-4.longbui19.repl.co/api1/ap.php"
+}
